@@ -1,4 +1,4 @@
-**# Nwaku Node Auto Installation Script
+# Nwaku Node Auto Installation Script
 
 This script automate the installation nWaku Node
 
