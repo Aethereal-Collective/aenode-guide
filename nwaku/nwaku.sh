@@ -101,7 +101,7 @@ stop_nwaku() {
 while true; do
     echo "Select an option:"
     echo "1) Install Prerequisites"
-    echo "2) Setup nWaku
+    echo "2) Setup nWaku"
     echo "3) Register RLN Membership"
     echo "4) Start nWaku Node"
     echo "5) Stop nWaku Node"
