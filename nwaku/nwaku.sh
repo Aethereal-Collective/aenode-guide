@@ -80,12 +80,11 @@ setup_nwaku() {
     echo "STORAGE_SIZE=${storage_size}" >> .env
     echo "Storage allocation set to ${storage_size}."
 
-    echo "Environment configured."
-}
-
-register_rln_membership() {
+    echo "Registering RLN membership..."
     ./register_rln.sh
     echo "RLN membership registered. Keystore file saved to keystore/keystore.json."
+
+    echo "Environment and RLN membership configured."
 }
 
 start_nwaku() {
@@ -101,19 +100,17 @@ stop_nwaku() {
 while true; do
     echo "Select an option:"
     echo "1) Install Prerequisites"
-    echo "2) Setup nWaku"
-    echo "3) Register RLN Membership"
-    echo "4) Start nWaku Node"
-    echo "5) Stop nWaku Node"
+    echo "2) Setup nWaku and Register RLN Membership"
+    echo "3) Start nWaku Node"
+    echo "4) Stop nWaku Node"
     echo "0) Exit"
     read -r option
 
     case $option in
         1) install_prerequisites ;;
         2) setup_nwaku ;;
-        3) register_rln_membership ;;
-        4) start_nwaku ;;
-        5) stop_nwaku ;;
+        3) start_nwaku ;;
+        4) stop_nwaku ;;
         0) echo "Exiting..."; exit ;;
         *) echo "Invalid option. Please try again." ;;
     esac
