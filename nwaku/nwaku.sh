@@ -75,11 +75,6 @@ setup_nwaku() {
     echo "ETH_TESTNET_KEY=$eth_key" >> .env
     echo 'RLN_RELAY_CRED_PASSWORD="12345678910"' >> .env
 
-    echo "Please enter storage allocation size (e.g., 10GB):"
-    read -r storage_size
-    echo "STORAGE_SIZE=${storage_size}" >> .env
-    echo "Storage allocation set to ${storage_size}."
-
     echo "Registering RLN membership..."
     ./register_rln.sh
     echo "RLN membership registered. Keystore file saved to keystore/keystore.json."
